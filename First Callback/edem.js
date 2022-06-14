@@ -34,25 +34,25 @@ grow.addEventListener('click', (event)=>{
 });
 
 
-function shrink(){
-    setTimeout(()=>{
-        object.style.width += size.value.concat('px');
-    }, Number(time.value) * 1000)
-}
-    function reset(){
-        let seconds = Number(time.value) * 1000;
-        let resetTime = Number(seconds) + 1000;
-    
-        setTimeout(()=>{
-            object.style.height = "30px";
-            object.style.weight = "30px";
-            object.style.backgroundColor = "orange"
-         }, resetTime)
-        }
 small.addEventListener('click', (event)=>{
         event.preventDefault();
-         console.log("Hello everyone");
-        shrink();
+            setTimeout(()=>{
+                object.style.width += size.value.concat('px');
+            }, Number(time.value) * 1000)
+        
+            function reset(){
+                let seconds = Number(time.value) * 1000;
+                let resetTime = Number(seconds) + 1000;
+            
+                setTimeout(()=>{
+                    object.style.height = "30px";
+                    object.style.weight = "30px";
+                    object.style.backgroundColor = "orange"
+                 }, resetTime)
+                }
+                 console.log("Hello everyone");
+                 
+
         reset()
 })
 
